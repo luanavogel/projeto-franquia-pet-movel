@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --default-border: 0.1rem solid #52658d36;
+    --default-border-radius: 1.2rem;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+}
+
+/* Pages 01 e 02 - Index e Cadastro Franqueado */
+.content_page01,
+.content_page02 {
+    display: grid;
+    grid-template-areas:
+        ". . . . . ."
+        ". logo logo logo form ."
+        ". logo logo logo form ."
+        ". . . . . ."
+    ;
+    gap: 8rem;
+}
+
+aside.page01,
+aside.page02 {
+    grid-area: logo;
+}
+
+aside.page01 img,
+aside.page02 img {
+    width: 100%;
+}
+
+main.page01,
+main.page02 {
+    grid-area: form;
+    width: 60rem;
+    height: auto;
+    border: var(--default-border);
+    padding: 5.7rem 4.4rem;
+    border-radius: var(--default-border-radius);
+}
+
+main h1 {
+    font-size: 3rem;
+    font-weight: 50rem;
+    text-align: center;
+}
+
+main h1 span.color {
+    color: #A9CF46;
+}
+
+main .actions {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+main .actions a {
+    border-radius: var(--default-border-radius);
+    text-decoration: none;
+    font-size: 2.4rem;
+    height: 5.5rem;
+    background-color: #52658D;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5.4rem;
+}
+
+main .actions a+a {
+    background-color: #A9CF46;
+    margin-top: 4.8rem;
+}
+
+main header {
+    display: flex;
+    gap: 0 1.8rem;
+    align-items: center;
+}
+
+main header i {
+    font-size: 2.5rem;
+    color: #A9CF46;
+}
+
+main form {
+    margin-top: 1.6rem;
+}
+
+main form label {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    display: block;
+}
+
+main form :is(input, select) {
+    width: 489px;
+    height: 5rem;
+    background: #FFF;
+    border: var(--default-border);
+    border-radius: var(--default-border-radius);
+    padding: 1rem;
+}
+
+main form select {
+    appearance: none;
+}
+
+main form .select-div {
+    position: relative;
+}
+
+main form .select-div::after {
+    top: 1.2rem;
+    right: 3rem;
+    font-size: 2rem;
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 600;
+    position: absolute;
+    z-index: 1;
+    color: #A9CF46;
+}
+
+main form select::after {
+    position: absolute;
+    z-index: 1;
+}
+
+main form textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 120px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+main footer.main_page01 p {
+    font-size: 1.6rem;
+    margin-top: 8rem;
+    text-align: center;
+}
+
+main footer.main_page01 a {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    display: block;
+    text-align: center;
+    color: #000;
+}
+
+footer {
+    padding: 1rem;
+}
+
+/* Page 03 - Cases de Sucesso */
+main.page03 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.page03 header {
+    display: flex;
+    justify-content: center;
+    background-color: #52658D;
+    width: 100%;
+    padding: 3rem;
+    box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+main.page03 header img {
+    max-width: 100%;
+    height: auto;
+}
+
+main.page03 .title h1 {
+    text-align: center;
+    padding: 3rem 0 1.5rem 0;
+    color: #fff;
+    font-size: 3.8rem;
+}
+
+main.page03 .reports_title {
+    padding-top: 3rem;
+}
+
+main.page03 .reports {
+    display: grid;
+    width: 85rem;
+    grid-template-areas:
+        ". . . . . . ."
+        ". . report1 . report2 . ."
+        ". . report3 . report4 . ."
+        ". . report5 . report6 . ."
+        ". . . . . . ."
+    ;
+    gap: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+main.page03 .reports h3 {
+    font-size: 1.7rem;
+}
+
+main.page03 .reports p.italic {
+    font-style: italic;
+}
+
+main.page03 section.report1,
+section.report2,
+section.report3,
+section.report4,
+section.report5,
+section.report6 {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+main.page03 section.report1 {
+    grid-area: report1;
+}
+
+main.page03 section.report2 {
+    grid-area: report2;
+}
+
+main.page03 section.report3 {
+    grid-area: report3;
+}
+
+main.page03 section.report4 {
+    grid-area: report4;
+}
+
+main.page03 section.report5 {
+    grid-area: report5;
+}
+
+main.page03 section.report6 {
+    grid-area: report6;
+}
+
+main.page03 .paragraph {
+    width: 100%;
+    padding: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    background-color: #A9CF46;
+    color: #fff;
+    font-weight: bold;
+}
+
+main.page03 section.call {
+    width: 30%;
+    padding-bottom: 5rem;
+}
+
+/* Page 04 - Contato */
+main.page04 {
+    display: grid;
+    grid-template-areas:
+        ". . . . ."
+        ". . form . contact"
+        ". . . . .";
+    gap: 4rem;
+}
+
+main.page04 .form {
+    grid-area: form;
+    border: var(--default-border);
+    padding: 5.7rem 4.4rem;
+    border-radius: var(--default-border-radius);
+}
+
+main.page04 h1 {
+    text-align: left;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+main.page04 p {
+    font-size: 1.5rem;
+}
+
+main.page04 .contact {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main.page04 .contacts {
+    padding: 1rem;
+}
+
+main.page04 .social {
+    padding: 1rem;
+}
+
+main.page04 .social_icons {
+    display: flex;
+    justify-items: center;
+    gap: 20px;
+    padding: 1.5rem 0;
+}
+
+main.page04 .social_icons .icon {
+    text-decoration: none;
+    color: #A9CF46;
+    font-size: 2.2rem;
+    transition: color 0.3s;
+}
+
+main.page04 .social_icons .icon:hover {
+    color: #8FAD3B;
+}
+
+main.page04 .slogan img {
+    width: 70%;
+}
+
+/* Responsividade 
+/* Tablets */
+@media (max-width: 992px) {
+    :root {
+        font-size: 55%;
+    }
+
+    .content_page01,
+    .content_page02 {
+        grid-template-areas:
+            "logo"
+            "form"
+        ;
+        gap: 2rem;
+    }
+
+    main.page01,
+    main.page02 {
+        width: 100%;
+    }
+
+    main.page03 .reports {
+        width: 100%;
+        grid-template-areas:
+            "report1"
+            "report2"
+            "report3"
+            "report4"
+            "report5"
+            "report6"
+        ;
+    }
+
+    main.page04 {
+        grid-template-areas:
+            "form"
+            "contact"
+        ;
+        gap: 2rem;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 576px) {
+    :root {
+        font-size: 50%;
+    }
+
+    .content_page01,
+    .content_page02 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    aside.page01,
+    aside.page02 {
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    main.page01,
+    main.page02 {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    main h1 {
+        font-size: 2.4rem;
+    }
+
+    main .actions a {
+        font-size: 2rem;
+        height: 4.5rem;
+        margin-top: 2rem;
+    }
+
+    main form label,
+    main form :is(input, select) {
+        width: 100%;
+    }
+
+    main footer.main_page01 p,
+    main footer.main_page01 a {
+        font-size: 1.6rem;
+    }
+
+    main.page03 header {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    main.page03 .title h1 {
+        font-size: 2.8rem;
+    }
+
+    main.page03 .reports {
+        width: 100%;
+        grid-template-areas:
+            "report1"
+            "report2"
+            "report3"
+            "report4"
+            "report5"
+            "report6"
+        ;
+        gap: 1rem;
+    }
+
+    main.page03 section.report1,
+    section.report2,
+    section.report3,
+    section.report4,
+    section.report5,
+    section.report6 {
+        font-size: 1.4rem;
+    }
+
+    main.page03 .paragraph {
+        font-size: 1.8rem;
+    }
+
+    main.page03 section.call {
+        width: 80%;
+    }
+
+    main.page04 .form {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    main.page04 .contact {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main.page04 .slogan img {
+        width: 100%;
+    }
+} 

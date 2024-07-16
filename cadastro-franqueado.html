@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Franqueado - Aumigos da Lu</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link para a biblioteca FontAwesome -->
+    <link href="/assets/fontawesome/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content_page02">
+        <aside class="page02">
+            <!-- Logomarca -->
+            <img src="assets/images/logo-aumigos-da-lu.jpg" alt="Logomarca Aumigos da Lu">
+        </aside>
+        <main class="page02">
+            <header>
+                <!-- Link para voltar à página inicial -->
+                <a href="index.html">
+                    <i class="fa-solid fa-angle-left"></i>
+                </a>
+                <h1>Seja um <span class="color">franqueado</span></h1>
+            </header>
+            <form action="">
+                <!-- Campo de nome completo -->
+                <label for="input-name">nome completo</label>
+                <input type="text" id="input-name" name="name" required pattern="^[a-zA-Zà-úÀ-Ú ]+$" required>
+
+                <!-- Campo de telefone -->
+                <label for="input-telefone">telefone</label>
+                <input type="tel" id="input-telefone" name="telefone" required pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+                    title="Formato: (99) 99999-9999" required>
+
+                    <!-- Campo de e-mail -->
+                <label for="input-email">e-mail</label>
+                <input type="email" id="input-email" name="email" required>
+
+                <!-- Campo de UF -->
+                <label for="input-UF">UF</label>
+                <div class="select-div">
+                    <select id="input-UF" name="UF" required>
+                        <option value="">Selecione uma opção</option>
+                        <!-- Opções de UF -->
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <!-- Campo de cidade -->
+                <label for="input-cidade">cidade</label>
+                <input type="text" id="input-cidade" name="cidade" required pattern="^[a-zA-Zà-úÀ-Ú ]+$" required>
+            </form>
+            <div class="actions">
+                <!-- Link para cadastrar -->
+                <a href="">Cadastrar</a>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <!-- Rodapé do site -->
+        <p>&copy; 2024 Aumigos da Lu</p>
+    </footer>
+</body>
+
+</html>
