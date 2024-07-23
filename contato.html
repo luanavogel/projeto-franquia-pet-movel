@@ -23,7 +23,7 @@
                 </a>
                 <h1>Formulário para contato</h1>
             </header>
-            <form action="">
+            <form id="form-contato" action="">
                 <!-- Campo de nome completo -->
                 <label for="nome">nome completo</label>
                 <input type="text" id="input-name" name="name" required pattern="^[a-zA-Zà-úÀ-Ú ]+$" required>
@@ -42,8 +42,8 @@
                 <textarea id="mensagem" name="mensagem" required></textarea>
 
                 <div class="actions">
-                    <!-- Link para enviar o formulário -->
-                    <a href="">Enviar</a>
+                    <!-- Botão de submit -->
+                    <button type="submit" class="btn-submit">Enviar</button>
                 </div>
             </form>
         </div>
@@ -81,6 +81,21 @@
         <!-- Rodapé do site -->
         <p>&copy; 2024 Aumigos da Lu</p>
     </footer>
+
+    <!-- Scripts - JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const formContato = document.getElementById('form-contato');
+
+            if (formContato) {
+                formContato.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('Formulário enviado com sucesso!');
+                    formContato.reset();
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

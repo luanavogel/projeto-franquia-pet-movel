@@ -81,6 +81,21 @@ main .actions a+a {
     margin-top: 4.8rem;
 }
 
+main .actions .btn-submit {
+    border: none;
+    border-radius: var(--default-border-radius);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2.4rem;
+    height: 5.5rem;
+    background-color: #52658D;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5.4rem;
+}
+
 main header {
     display: flex;
     gap: 0 1.8rem;
@@ -196,7 +211,8 @@ main.page03 .title h1 {
 }
 
 main.page03 .reports_title {
-    padding-top: 3rem;
+    padding: 3rem;
+    text-align: center;
 }
 
 main.page03 .reports {
@@ -456,6 +472,7 @@ main.page04 .slogan img {
     section.report5,
     section.report6 {
         font-size: 1.4rem;
+        margin: 0 10px;
     }
 
     main.page03 .paragraph {
@@ -474,7 +491,7 @@ main.page04 .slogan img {
     main.page04 .contact {
         width: 100%;
         flex-direction: column;
-        align-items: center;
+        margin-left: 10px;
     }
 
     main.page04 .slogan img {

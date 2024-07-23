@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Link para a biblioteca FontAwesome -->
     <link href="/assets/fontawesome/css/all.css" rel="stylesheet">
+    <!-- Link para CDN do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -25,7 +27,7 @@
                 </a>
                 <h1>Seja um <span class="color">franqueado</span></h1>
             </header>
-            <form action="">
+            <form id="form-cadastro" action="">
                 <!-- Campo de nome completo -->
                 <label for="input-name">nome completo</label>
                 <input type="text" id="input-name" name="name" required pattern="^[a-zA-Zà-úÀ-Ú ]+$" required>
@@ -77,17 +79,32 @@
                 <!-- Campo de cidade -->
                 <label for="input-cidade">cidade</label>
                 <input type="text" id="input-cidade" name="cidade" required pattern="^[a-zA-Zà-úÀ-Ú ]+$" required>
+                <div class="actions">
+                    <!-- Botão de submit -->
+                    <button type="submit" class="btn-submit">Cadastrar</button>
+                </div>
             </form>
-            <div class="actions">
-                <!-- Link para cadastrar -->
-                <a href="">Cadastrar</a>
-            </div>
         </main>
     </div>
     <footer>
         <!-- Rodapé do site -->
         <p>&copy; 2024 Aumigos da Lu</p>
     </footer>
+
+    <!-- Scripts - JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const formCadastro = document.getElementById('form-cadastro');
+
+            if (formCadastro) {
+                formCadastro.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('Formulário enviado com sucesso!');
+                    formCadastro.reset();
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
